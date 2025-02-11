@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>This is a home page</h1>
+        <% products.map(product => { %>
+            <h2><%=product.name  %></h2>
+            <p>Price: <%=product.price  %></p>
+            <p>Stock: <%=product.stock  %></p>
+            <img src="<%= product.image_url %>" alt="<%=product.name  %> image">
+        <% } )%>
+    </body>
+</html>
