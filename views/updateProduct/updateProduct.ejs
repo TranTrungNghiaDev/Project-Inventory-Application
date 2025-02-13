@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Update product</title>
+    </head>
+    <body>
+        <h1>Update product</h1>
+        <img src="<%=product.image_url %>" alt="<%=product.name  %> image">
+        <form action="/updateProduct" method="post">
+            <input type="text" name="product_id" value="<%=product.id %>" readonly hidden>
+            
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="<%=product.name %>" >
+            <label for="price">Price($): </label>
+            <input type="text" name="price" value="<%=product.price %>" >
+            <label for="stock">Stock: </label>
+            <input type="text" name="stock" value="<%=product.stock %>" >
+            <label for="image_url">Image url: </label>
+            <input type="text" name="image_url" value="<%=product.image_url %>">
+            <label for="category_name">Category: </label>
+            <select name="category_name">
+                <option value="laptop" <%= product.category === "laptop" ? "selected" : "" %>>Laptop</option>
+                <option value="headphone" <%= product.category === "headphone" ? "selected" : "" %>>Headphone</option>
+            </select>
+            <button>Update</button>
+        </form>
+        </form>
+    </body>
+</html>

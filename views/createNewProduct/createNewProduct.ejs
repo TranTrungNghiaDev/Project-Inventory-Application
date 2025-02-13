@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Create new product</title>
+    </head>
+    <body>
+        <h1>Create new product</h1>
+        <form action="/createNewProduct" method="post">
+            <label for="name">Name: </label>
+            <input type="text" name="name" required>
+            <label for="price">Price: </label>
+            <input type="number" name="price" step="0.01" required>
+            <label for="stock">Stock: </label>
+            <input type="number" name="stock" required>
+            <label for="description">Description: </label>
+            <input type="text" name="description" >
+            <label for="description">Image Url: </label>
+            <input type="text" name="image_url" >
+            <label for="category_name">Category: </label>
+            <select name="category_name">
+                <option value="laptop">Laptop</option>
+                <option value="headphone">Headphone</option>
+            </select>
+            <button type="submit">Add new product</button>
+        </form>
+    </body>
+</html>
